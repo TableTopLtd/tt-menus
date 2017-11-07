@@ -2,7 +2,7 @@ package si.fri.tabletop.menus.services;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
-import si.fri.tabletop.menus.Menu;
+import si.fri.tabletop.menus.models.Menu;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

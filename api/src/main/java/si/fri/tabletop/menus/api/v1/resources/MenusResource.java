@@ -1,6 +1,6 @@
 package si.fri.tabletop.menus.api.v1.resources;
 
-import si.fri.tabletop.menus.Menu;
+import si.fri.tabletop.menus.models.Menu;
 import si.fri.tabletop.menus.services.MenusBean;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -48,7 +48,7 @@ public class MenusResource {
     @POST
     public Response createMenu(Menu menu) {
 
-        if (menu.getTitle() == null || menu.getTitle().isEmpty()) {
+        if (menu.getPlaceId() == null || menu.getPlaceId().isEmpty()) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         } else {
             menu = menusBean.createMenu(menu);

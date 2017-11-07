@@ -3,7 +3,10 @@
     <persistence-unit name="menus-jpa" transaction-type="RESOURCE_LOCAL">
         <non-jta-data-source>jdbc/MenusDS</non-jta-data-source>
 
-        <class>si.fri.tabletop.menus.Menu</class>
+        <class>si.fri.tabletop.menus.models.Menu</class>
+        <class>si.fri.tabletop.menus.models.Drink</class>
+        <class>si.fri.tabletop.menus.models.Ingredient</class>
+        <class>si.fri.tabletop.menus.models.Food</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
