@@ -17,7 +17,7 @@ INSERT INTO ingredients (id, title) VALUES (9, 'green beans');
 INSERT INTO ingredients (id, title) VALUES (10, 'green pepper');
 INSERT INTO ingredients (id, title) VALUES (11, 'black pepper');
 INSERT INTO ingredients (id, title) VALUES (12, 'white pepper');
-INSERT INTO ingredients (id, title) VALUES (13, 'eeg');
+INSERT INTO ingredients (id, title) VALUES (13, 'egg');
 INSERT INTO ingredients (id, title) VALUES (14, 'butter');
 INSERT INTO ingredients (id, title) VALUES (15, 'pigeon');
 
