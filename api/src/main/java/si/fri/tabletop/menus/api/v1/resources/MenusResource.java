@@ -1,5 +1,7 @@
 package si.fri.tabletop.menus.api.v1.resources;
 
+import com.kumuluz.ee.logs.LogManager;
+import com.kumuluz.ee.logs.Logger;
 import si.fri.tabletop.menus.models.Menu;
 import si.fri.tabletop.menus.services.MenusBean;
 
@@ -18,6 +20,8 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public class MenusResource {
 
+    private Logger log = LogManager.getLogger(MenusResource.class.getName());
+
     @Context
     private UriInfo uriInfo;
 
@@ -26,18 +30,18 @@ public class MenusResource {
 
     @GET
     public Response getMenus() {
-
+        log.info("MENUS metoda");
         List<Menu> menus = menusBean.getMenus(uriInfo);
-
+        log.info("Koliko menijev: " + menus.size());
         return Response.ok(menus).build();
     }
 
     @GET
     @Path("/{menuId}")
     public Response getMenu(@PathParam("menuId") String menuId) {
-
+        log.info("MENU metoda");
         Menu menu = menusBean.getMenu(menuId);
-
+        log.info("MENU: "+ menu.getPlaceId());
         if (menu == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }

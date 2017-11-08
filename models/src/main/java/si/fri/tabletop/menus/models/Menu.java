@@ -10,6 +10,8 @@ import java.util.List;
 @NamedQueries(value =
         {
                 @NamedQuery(name = "Menu.getAll", query = "SELECT m FROM menus m"),
+                @NamedQuery(name = "Menu.findByPlace", query = "SELECT m FROM menus m WHERE m.placeId = " +
+                        ":placeId")
         })
 @UuidGenerator(name = "idGenerator")
 public class Menu {
