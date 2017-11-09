@@ -1,5 +1,5 @@
-# RSO: Menus microservice
-
+# TableTop Menus microservice
+[![Build Status](https://travis-ci.org/TableTopLtd/tt-menus.svg?branch=master)](https://travis-ci.org/TableTopLtd/tt-menus)
 ## Prerequisites
 
 ```bash
