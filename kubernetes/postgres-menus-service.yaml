@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres-places
+  name: postgres-menus
 spec:
   type: ClusterIP
   ports:
@@ -9,4 +9,4 @@ spec:
     protocol: TCP
     targetPort: 5433
   selector:
-    app: postgres-places
+    app: postgres-menus
