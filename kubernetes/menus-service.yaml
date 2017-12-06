@@ -9,4 +9,4 @@ spec:
     protocol: TCP
     targetPort: 8081
   selector:
-    app: places
+    app: menus

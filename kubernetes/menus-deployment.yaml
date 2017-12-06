@@ -20,7 +20,7 @@ spec:
           - name: KUMULUZEE_CONFIG_ETCD_HOSTS
             value: http://etcd:2379
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-            value: jdbc:postgresql://postgres-places:5432/menu
+            value: jdbc:postgresql://postgres-menus:5432/menu
           - name: KUMULUZEE_SERVER_BASEURL
             value: http://localhost:32696
         ports:
