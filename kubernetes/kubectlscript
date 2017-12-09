@@ -1,0 +1,11 @@
+kubectl delete svc menus
+kubectl delete deploy menus-deployment
+kubectl delete svc postgres-menus
+kubectl delete deploy postgres-menus-deployment
+
+kubectl create -f postgres-menus-deployment.yaml
+kubectl create -f postgres-menus-service.yaml
+kubectl create -f menus-deployment.yaml
+kubectl create -f menus-service.yaml
+
+kubectl proxy

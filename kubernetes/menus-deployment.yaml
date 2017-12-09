@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: menus-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: menus
+    spec:
+      containers:
+      - image: tabletopltd/tt-menus
+        name: menus
+        env:
+          - name: KUMULUZEE_DISCOVERY_CLUSTER
+            value: bluemix
+          - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
+            value: http://etcd:2379
+          - name: KUMULUZEE_CONFIG_ETCD_HOSTS
+            value: http://etcd:2379
+          - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
+            value: jdbc:postgresql://postgres-menus:5432/menu
+          - name: KUMULUZEE_SERVER_BASEURL
+            value: http://localhost:32696
+        ports:
+        - containerPort: 8081
+          name: server
+          protocol: TCP
