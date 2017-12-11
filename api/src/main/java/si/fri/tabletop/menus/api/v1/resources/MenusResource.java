@@ -2,6 +2,7 @@ package si.fri.tabletop.menus.api.v1.resources;
 
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
+import com.kumuluz.ee.logs.cdi.Log;
 import si.fri.tabletop.menus.models.Menu;
 import si.fri.tabletop.menus.services.MenusBean;
 
@@ -18,6 +19,7 @@ import java.util.List;
 @Path("/menus")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@Log
 public class MenusResource {
 
     private Logger log = LogManager.getLogger(MenusResource.class.getName());
